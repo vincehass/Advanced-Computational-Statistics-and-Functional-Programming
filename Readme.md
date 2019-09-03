@@ -28,6 +28,11 @@ que j'ai du temps, il me fera plaisir de discuter / vous aider. Si
 vous voulez être sûr de me rencontrer, prenez rendez-vous avec moi
 auparavant.
 
+## Bilbiographie.
+La bibliographie de ce cours est disponible en ligne au
+https://www.zotero.org/patbuzz/items/collectionKey/GWCJ4A26
+Elle sera mise à jour régulièrement.
+
 ## Logiciels à installer.
 Les logiciels suivants sont nécessaires pour le cours.
 * R version >= 3.5 (https://cran.r-project.org/).
