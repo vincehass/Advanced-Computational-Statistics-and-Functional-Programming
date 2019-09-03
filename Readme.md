@@ -10,11 +10,11 @@ votre cours. Vous y trouverez:
 Veuillez noter que nous n'utiliserons *pas* Moodle pour ce cours; *le
 dépôt contiendra donc l'ensemble du matériel nécessaire*.
 
-## Informations
+## Informations.
 * Local du cours: PK-S1545
 * Horaire: de 10h à 12h le
-  * Lundi: 9, 16, 23 et 30 septembre.
-  * Mercredi: 4, 11, 18 et 25 septembre.
+  * lundi: 9, 16 et 23 septembre.
+  * mercredi: 4, 11, 18 et 25 septembre.
 
 **Examen le 30 septembre de 9h30 à 12h30**
 
@@ -41,11 +41,12 @@ début de la session pour vous assurer qu'ils sont bien à jour.
 Les packages ci-dessous sont nécessaires à l'exécution des scripts R
 présents sur ce dépôt. Ils sont tous disponibles sur CRAN et peuvent
 donc être installés par un simple appel à `install.packages`.
-* magrittr
-* far
 * devtools
-* pryr
+* foreach
+* magrittr
 * microbenchmark
+* proftools
+* pryr
 
 Si vous possédez déjà ces packages, je vous suggère de profiter du
 début de la session pour vous assurer qu'ils sont à jour. Pour ce
@@ -172,7 +173,7 @@ Tout au long du cours, vous aurez besoin d'accomplir trois opérations de base:
 Il est possible d'effectuer ces trois opérations directement à partir
 de RStudio.
 
-#### `git pull`: incorporer les changements les plus distants.
+#### `git pull`: incorporer les changements les plus récents.
 La première opération à maîtriser est connue sous le nom de `git
 pull`. Elle correspond à la flèche 1 sur le schéma du début de la
 section. En réalité, elle accomplit deux tâches:
