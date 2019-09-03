@@ -1,3 +1,11 @@
+[![Cours 1](https://img.shields.io/badge/Cours_1-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 2](https://img.shields.io/badge/Cours_2-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 3](https://img.shields.io/badge/Cours_3-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 4](https://img.shields.io/badge/Cours_4-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 5](https://img.shields.io/badge/Cours_5-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 6](https://img.shields.io/badge/Cours_6-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 7](https://img.shields.io/badge/Cours_7-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+
 # MAT8186: Techniques avancées en programmation statistiques R
 ## Bienvenue!
 Tout d'abord, je vous souhaite la bienvenue sur le dépôt GitHub de
