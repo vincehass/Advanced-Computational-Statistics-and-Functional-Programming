@@ -1,4 +1,4 @@
-[![Cours 1](https://img.shields.io/badge/Cours_1-En_ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 1](https://img.shields.io/badge/Cours_1-En_ligne-green.svg)](https://github.com/ps-pat/mat8186-r-avance)
 [![Cours 2](https://img.shields.io/badge/Cours_2-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
 [![Cours 3](https://img.shields.io/badge/Cours_3-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
 [![Cours 4](https://img.shields.io/badge/Cours_4-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
