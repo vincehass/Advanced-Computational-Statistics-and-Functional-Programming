@@ -1,4 +1,4 @@
-[![Cours 1](https://img.shields.io/badge/Cours_1-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 1](https://img.shields.io/badge/Cours_1-En_ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
 [![Cours 2](https://img.shields.io/badge/Cours_2-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
 [![Cours 3](https://img.shields.io/badge/Cours_3-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
 [![Cours 4](https://img.shields.io/badge/Cours_4-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
@@ -60,6 +60,7 @@ donc être installés par un simple appel à `install.packages`.
 * microbenchmark
 * proftools
 * pryr
+* testthat
 
 Si vous possédez déjà ces packages, je vous suggère de profiter du
 début de la session pour vous assurer qu'ils sont à jour. Pour ce
@@ -279,7 +280,8 @@ nécessaire.
 
 ![Screenshot, push button](readme_pictures/push_button.png)
 
-Une nouvelle fenêtre sevrait s'ouvrir et donner une sortie semblable à celle illustrée ci-dessous.
+Une nouvelle fenêtre devrait s'ouvrir et donner une sortie semblable à
+celle illustrée ci-dessous.
 
 ![Screenshot, push output](readme_pictures/push_output.png)
 
