@@ -108,8 +108,32 @@ La création du fork est extrêmement simple: il vous suffit de cliquer
 sur le bouton `Fork` au coin supérieur droit de cette page, à droite du
 bouton `Watch`.
 
-
 ![Screenshot, fork repo](readme_pictures/fork_repo.png)
+
+### Rendez votre dépôt privé.
+Cette étape vous permet de choisir qui aura accès à votre dépôt.
+1. Cliquez sur le bouton `Settings` au coin supérieur droit de la page
+de *votre fork*.
+
+![Screenshot, settings](readme_pictures/private_settings.png)
+
+2. Au bas de la page, dans la "Danger Zone", cliquez sur `Make private`.
+
+![Screenshot, make private](readme_pictures/private_danger.png)
+
+3. Confirmez votre choix en tappant le nom du dépôt dans la boîte de
+   dialogue et en cliquan sur `I understand, make this repository
+   private`.
+
+![Screenshot, confirm private](readme_pictures/private_confirm.png)
+
+4. Remontez en haut de la page et cliquez sur `Collaborators` à gauche.
+
+![Screenshot, collaborators](readme_pictures/private_collaborator.png)
+
+5. Cherchez mon nom d'utilisateur (ps-pat) et ajoutez-moi comme collaborateur.
+
+![Screenshot, settings](readme_pictures/private_addCollaborator.png)
 
 ### Créez un dépôt local.
 Bien qu'il soit possible de travailler directement sur votre dépôt
