@@ -34,12 +34,12 @@ circShift <- function(v, shift){
 
     ## On corrige pour shift < 0 et shift > n.
     n <- length(v)
-    actual_shift <- as.numeric(shift) %% stop("???")
+    actual_shift <- as.numeric(shift) %% n
 
     ## Si actual_shift = 0, on retourne v sans modification.
-    identical(as.numeric(actual_shift), 0) && stop("???")
+    identical(as.numeric(actual_shift), 0) && return(v)
 
-    rg <- seq(from = stop("???"), by = stop("???"), length.out = stop("???"))
+    rg <- seq(from = actual_shift+1, by = 1, length.out = n-actual_shift)
 
     c(v[rg], v[-rg])
 }
@@ -54,7 +54,7 @@ circShift <- function(v, shift){
 circAutoCor <- function(v, tau)
     v %>%
         scale(scale = FALSE) %>%
-        {crossprod(., stop("???")) / crossprod(.)} %>%
+        {crossprod(., circShift(v,tau)) / crossprod(.)} %>%
         as.numeric
 
 ### Kata 3.
@@ -80,20 +80,20 @@ prngSimStudy <- function(m, n = 1000, alpha = 0.05){
     ## Test de chacun des générateurs.
     res <- sapply(rngs, function(rng){
         ## On choisi un générateur.
-        RNGkind(stop("???"))
+        RNGkind(rng)
 
         ## Données pour l'étude de simulation.
-        dat <- matrix(stop("???"))
+        dat <- matrix(data=runif(n=n*m),nrow=m,ncol=n)
 
         ## On applique le test de Ljung-Box à chacune des colonne pour
         ## détecter une éventuelle autocorrélation
         ## (https://www.mathworks.com/help/econ/ljung-box-q-test.html).
-        lb_test <- apply(X = stop("???"), MARGIN = stop("???"), FUN = Box.test,
+        lb_test <- apply(X = dat, MARGIN = 1, FUN = Box.test,
                          lag = log(n), type = "Ljung-Box")
         p_values <- sapply(lb_test, function(x) x[["p.value"]])
 
         ## On compte la proportion de p values inférieures au seuil fixé.
-        sum(stop("???")) / m
+        sum(p_values[p_values<alpha]) / m
     })
 
     ## On rétablit le générateur précédant.
@@ -108,12 +108,12 @@ prngSimStudy <- function(m, n = 1000, alpha = 0.05){
 ## (https://projecteuler.net/problem=1).
 ## -- uLim: limite supérieure.
 euler1 <- function(uLim = 1e3){
-    actual_uLim <- stop("???")
+    actual_uLim <- uLim-1
 
     mult5 <- seq(from = 5, to = actual_uLim, by = 5)
     mult3 <- seq(from = 3, to = actual_uLim, by = 3) %>%
         ## Indice: il manque un opérateur infixe et un vecteur.
-        subset(!(. stop("???") stop("???")))
+        subset(!(. %in% mult5))
 
     sum(mult3, mult5)
 }
@@ -127,7 +127,7 @@ fib <- function(n){
     if(identical(as.numeric(n), 1) || identical(as.numeric(n), 2))
          return(1)
 
-    stop("???") + stop("???")
+    fib(n-1) + fib(n-2)
 }
 
 ### Kata 6.
@@ -137,14 +137,14 @@ fib <- function(n){
 ## (https://bit.ly/2yNDySE).
 ## -- n: nombre à calculer.
 fibMem <- function(n){
-    mem <- c(rep(1, 2), rep(stop("???"), max(n - 2, 0)))
+    mem <- c(rep(1, 2), rep(NA, max(n - 2, 0)))
 
     ## Si le nombre à la position n n'a pas déjà été calculé, on le
     ## calcule récursivement, mais en faisant appel aux nombres déjà
     ## calculés.
     getMem <- function(n){
         if (is.na(mem[n]))
-            mem[n] <<- stop("???") + stop("???")
+            mem[n] <<-  getMem(n-1)+getMem(n-2) 
         mem[n]
     }
 
@@ -160,7 +160,7 @@ fibMem <- function(n){
 powD <- function(m, p, symmetric = FALSE){
     if (identical(as.numeric(p), 1) ||
         identical(as.numeric(dim(m)), rep(1, 2)))
-        return(stop("???"))
+        return(m)
 
     ## Calcul de la décomposition spectrale de m
     ## (http://mathworld.wolfram.com/EigenDecomposition.html).
@@ -170,10 +170,10 @@ powD <- function(m, p, symmetric = FALSE){
 
     ## Si m est symmétrique, l'inverse de u est simplement sa
     ## transposée. Sinon, on calcule son inverse en appelant solve.
-    inv <- ifelse(symmetric, t, stop("???"))
+    inv <- ifelse(symmetric, t(e_vectors), solve(e_vectors))
 
     ## M^p = U(D^p)U^(-1)
-    stop("???")
+    e_vectors%*%diag(as.numeric(e_values)^p)%*%inv
 }
 
 ### Kata 8.
