@@ -1,6 +1,6 @@
 [![Cours 1](https://img.shields.io/badge/Cours_1-En_ligne-green.svg)](https://github.com/ps-pat/mat8186-r-avance/tree/automne2019/1-introduction)
 [![Cours 2](https://img.shields.io/badge/Cours_2-En_ligne-green.svg)](https://github.com/ps-pat/mat8186-r-avance/tree/automne2019/2-debug_profile_benchmark)
-[![Cours 3](https://img.shields.io/badge/Cours_3-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
+[![Cours 3](https://img.shields.io/badge/Cours_3-En_ligne-green.svg)](https://github.com/ps-pat/mat8186-r-avance/tree/automne2019/3-performance)
 [![Cours 4](https://img.shields.io/badge/Cours_4-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
 [![Cours 5](https://img.shields.io/badge/Cours_5-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
 [![Cours 6](https://img.shields.io/badge/Cours_6-Hors--ligne-red.svg)](https://github.com/ps-pat/mat8186-r-avance)
