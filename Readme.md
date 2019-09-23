@@ -55,6 +55,7 @@ Les packages ci-dessous sont nécessaires à l'exécution des scripts R
 présents sur ce dépôt. Ils sont tous disponibles sur CRAN et peuvent
 donc être installés par un simple appel à `install.packages`.
 * devtools
+* doParallel
 * foreach
 * magrittr
 * microbenchmark
