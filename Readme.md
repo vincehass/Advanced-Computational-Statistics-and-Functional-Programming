@@ -60,6 +60,7 @@ donc être installés par un simple appel à `install.packages`.
 * microbenchmark
 * proftools
 * pryr
+* roxygen2
 * testthat
 
 Si vous possédez déjà ces packages, je vous suggère de profiter du
