@@ -19,8 +19,8 @@ dépôt contiendra donc l'ensemble du matériel nécessaire*.
 ## Informations.
 * Lien Zoom pour le cours: https://uqam.zoom.us/j/93180864930
 * Horaire: de 10h30 à 12h30 le
-  * lundi: 14 et 28 septembre, 5 et 19 octobre.
-  * mercredi: 16 et 30 septembre, 7 et 21 octobre.
+  * lundi: 14 et 28 septembre, 12 et 26 octobre.
+  * mercredi: 16 et 30 septembre, 14 et 28 octobre.
 
 ## Coordonnées.
 Vous pouvez me joindre:
