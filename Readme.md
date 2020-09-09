@@ -31,7 +31,10 @@ Vous pouvez me joindre:
 Zoom. Nous ne nous rencontrerons en personne que si nécessaire.
 
 ## Bilbiographie.
-À venir...
+La bibliographie du cours est disponible sur Mendeley:
+https://www.mendeley.com/community/mat8186-techniques-avancees-en-programmation-statistiques-r/
+Elle est en construction permanente, des documents pourraient y être ajouté
+au courant de la session.
 
 ## Logiciels à installer.
 Les logiciels suivants sont nécessaires pour le cours.
