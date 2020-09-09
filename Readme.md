@@ -1,16 +1,15 @@
-[![Cours 1](https://img.shields.io/badge/Cours_1-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/1-introduction)
-[![Cours 2](https://img.shields.io/badge/Cours_2-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/2-debug_profile_benchmark)
-[![Cours 3](https://img.shields.io/badge/Cours_3-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/3-performance)
-[![Cours 4](https://img.shields.io/badge/Cours_4-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/4-oop)
-[![Cours 5](https://img.shields.io/badge/Cours_5-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/5-programmation_concurrente)
-[![Cours 6](https://img.shields.io/badge/Cours_6-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/6-packaging)
+[![Cours 1](https://img.shields.io/badge/Cours_1-Hors--ligne-red.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/1-introduction)
+[![Cours 2](https://img.shields.io/badge/Cours_2-Hors--ligne-red.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/2-debug_profile_benchmark)
+[![Cours 3](https://img.shields.io/badge/Cours_3-Hors--ligne-red.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/3-performance)
+[![Cours 4](https://img.shields.io/badge/Cours_4-Hors--ligne-red.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/4-oop)
+[![Cours 5](https://img.shields.io/badge/Cours_5-Hors--ligne-red.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/5-programmation_concurrente)
+[![Cours 6](https://img.shields.io/badge/Cours_6-Hors--ligne-red.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/6-packaging)
 
 # MAT8186: Techniques avancées en programmation statistiques R
 ## Bienvenue!
 Tout d'abord, je vous souhaite la bienvenue sur le dépôt GitHub de
 votre cours. Vous y trouverez:
 * Slides de chacun des cours.
-* Exercices ("Katas").
 * Devoirs.
 * Liens utiles / matériel supplémentaire.
 
@@ -18,33 +17,27 @@ Veuillez noter que nous n'utiliserons *pas* Moodle pour ce cours; *le
 dépôt contiendra donc l'ensemble du matériel nécessaire*.
 
 ## Informations.
-* Local du cours: PK-S1545
-* Horaire: de 10h à 12h le
-  * lundi: 9, 16 et 23 septembre.
-  * mercredi: 4, 11, 18 et 25 septembre.
-
-**Examen le 30 septembre de 9h30 à 12h30**
+* Lien Zoom pour le cours: https://uqam.zoom.us/j/93180864930
+* Horaire: de 10:30h à 12:30h le
+  * lundi: 14 et 28 septembre, 5 et 19 octobre.
+  * mercredi: 16 et 30 septembre, 7 et 21 octobre.
 
 ## Coordonnées.
 Vous pouvez me joindre:
 * par e-mail: fournier.patrick@uqam.ca
 * en personne: PK-5323.
 
-Vous pouvez en tout temps passer à mon bureau. Si je suis présent et
-que j'ai du temps, il me fera plaisir de discuter / vous aider. Si
-vous voulez être sûr de me rencontrer, prenez rendez-vous avec moi
-auparavant.
+Étant donné la pandémie, privilégiez les communication par e-mail ou
+Zoom. Nous ne nous rencontrerons en personne que si nécessaire.
 
 ## Bilbiographie.
-La bibliographie de ce cours est disponible en ligne au
-https://www.zotero.org/patbuzz/items/collectionKey/GWCJ4A26
-Elle sera mise à jour régulièrement.
+À venir...
 
 ## Logiciels à installer.
 Les logiciels suivants sont nécessaires pour le cours.
-* R version >= 3.5 (https://cran.r-project.org/).
-* RStudio version >= 1.2 (https://www.rstudio.com/products/rstudio/).
-* Git version >= 2.20 (https://git-scm.com/).
+* R version >= 4.0 (https://cran.r-project.org/).
+* RStudio version >= 1.3 (https://www.rstudio.com/products/rstudio/).
+* Git version >= 2.28 (https://git-scm.com/).
 
 Si vous possédez déjà ces logiciels, je vous suggère de profiter du
 début de la session pour vous assurer qu'ils sont bien à jour.
