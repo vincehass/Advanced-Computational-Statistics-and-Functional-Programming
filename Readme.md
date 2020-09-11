@@ -97,35 +97,34 @@ apportés. Pour ce faire,
 
 ![Screenshot, watch repo](readme_pictures/watch_repo.png)
 
-### Forkez le dépôt.
+### Créez un nouveau dépôt privé
+Su la page principale de votre compte, cliquez sur le bouton
+«Create repository».
+
+![Screenshot, create repo](readme_picture/create_repo.png)
+
+Par la suite, donnez un nom et décrivez votre nouveau dépôt. Noubliez pas
+de le rendre privé!
+
+![Screenshot, create_repo2](readme_picture/create_repo2.png)
+
+### Dupliquez le dépôt.
 Cette étape a pour but de créer votre propre copie personnelle du
-dépôt (appelée un fork). Pour la suite du cours, *vous allez
-travailler exclusivement dans ce fork*.
+dépôt. Pour la suite du cours, *vous allez travailler exclusivement dans
+cette copie*.
 
-La création du fork est extrêmement simple: il vous suffit de cliquer
-sur le bouton `Fork` au coin supérieur droit de cette page, à droite du
-bouton `Watch`.
+La procédure permettant de dupliquer le dépôt est décrite en détail
+[ici](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/duplicating-a-repository).
 
-![Screenshot, fork repo](readme_pictures/fork_repo.png)
+Une fois cela fait, donnez-moi accès à votre dépôt en m'ajoutant comme
+collaborateur.
 
-### Rendez votre dépôt privé.
-Cette étape vous permet de choisir qui aura accès à votre dépôt.
 1. Cliquez sur le bouton `Settings` au coin supérieur droit de la page
 de *votre fork*.
 
 ![Screenshot, settings](readme_pictures/private_settings.png)
 
-2. Au bas de la page, dans la "Danger Zone", cliquez sur `Make private`.
-
-![Screenshot, make private](readme_pictures/private_danger.png)
-
-3. Confirmez votre choix en tappant le nom du dépôt dans la boîte de
-   dialogue et en cliquan sur `I understand, make this repository
-   private`.
-
-![Screenshot, confirm private](readme_pictures/private_confirm.png)
-
-4. Remontez en haut de la page et cliquez sur `Collaborators` à gauche.
+2. Cliquez sur `Collaborators` à gauche.
 
 ![Screenshot, collaborators](readme_pictures/private_collaborator.png)
 
@@ -169,8 +168,9 @@ cela ne vous est pas utile. Ce qu'il vous faut, c'est être capable
 *d'intégrer mes changements à votre dépôt* (flèche 1 sur le
 schéma). Attaquons-nous à ce problème.
 
-1. Assurez-vous que RStudio est bien ouvert à votre projet (coin
-   supérieur droit).
+1. Assurez-vous que RStudio soit bien ouvert à votre projet (coin
+   supérieur droit) et que vous travailliez bien sur la branche
+   «automne2020».
 
 ![Screenshot, RStudio current project](readme_pictures/remotes1.png)
 
@@ -180,14 +180,15 @@ schéma). Attaquons-nous à ce problème.
 
 ![Screenshot, RStudio git open shell](readme_pictures/remotes2.png)
 
-3. Dans la fenêtre qui vient de s'ouvrir, tapez les 4 commandes
+3. Dans la fenêtre qui vient de s'ouvrir, tapez les 5 commandes
    suivantes (à chaque fois suivi de `enter`):
 
 ``` Shell
-git remote add upstream https://github.com/ps-pat/mat8186-R-avance.git
-git fetch upstream automne2019
-git branch --set-upstream-to=upstream/automne2019
-git config remote.pushdefault upstream origin
+git remote add upstream https://github.com/cours-patrickFournier/mat8186-r-avance.git
+git fetch upstream automne2020
+git branch --set-upstream-to=upstream/automne2020
+git config remote.pushdefault origin
+git config push.default current
 ```
 Félicitation, vous êtes maintenant prêt à suivre le cours!
 
