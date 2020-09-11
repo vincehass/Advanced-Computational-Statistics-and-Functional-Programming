@@ -120,7 +120,7 @@ Une fois cela fait, donnez-moi accès à votre dépôt en m'ajoutant comme
 collaborateur.
 
 1. Cliquez sur le bouton `Settings` au coin supérieur droit de la page
-de *votre fork*.
+de *votre dépôt*.
 
 ![Screenshot, settings](readme_pictures/private_settings.png)
 
@@ -147,9 +147,10 @@ se fait aisément à l'aide de RStudio.
 
 ![Screenshot, new project git](readme_pictures/local_repo2.png)
 
-5. Dans l'écran suivant, inscrivez l'URL de *votre fork*. Celui-ci
-   vous est donné lorsque vous cliquez sur le bouton `Clone or
-   download` au coin supérieur droit de la page de votre fork.
+5. Dans l'écran suivant, inscrivez l'URL de *mon dépôt*:
+   https://github.com/cours-patrickFournier/mat8186-r-avance.git. Celui-ci
+   vous est donné lorsque vous cliquez sur le bouton `Code` au coin
+   supérieur droit de la page de mon dépôt.
 
 ![Screenshot, new project git](readme_pictures/local_repo3.png)
 
@@ -157,20 +158,15 @@ se fait aisément à l'aide de RStudio.
 
 ### Ajustement des remotes.
 Félicitation, vous disposez maintenant d'une copie locale de votre
-fork! Toutefois, vous n'êtes pas tout à fait au bout de vos peines; il
-reste un problème à régler. À ce stade, vous êtes capable d'envoyer
-vos changements locaux vers la copie de votre fork hébergée sur GitHub
-(flèche 2 sur le schéma du début de la section). De la même manière,
-vous êtes en mesure d'intégrer les modifications apportées à la copie
-distante de votre fork dans votre copie locale. Toutefois, comme vous
-êtes le seul utilisateur capable d'apporter ce genre de modification,
-cela ne vous est pas utile. Ce qu'il vous faut, c'est être capable
-*d'intégrer mes changements à votre dépôt* (flèche 1 sur le
-schéma). Attaquons-nous à ce problème.
+dépôt! Toutefois, vous n'êtes pas tout à fait au bout de vos peines;
+il reste un problème à régler. À ce stade, vous êtes capable
+d'intégrer les changements que j'apporte à mon dépôt au
+votre. Toutefois, il vous reste à configurer git de manière à ce que
+vos modifications locales soient envoyées à votre dépôt. Pour ce faire,
 
 1. Assurez-vous que RStudio soit bien ouvert à votre projet (coin
    supérieur droit) et que vous travailliez bien sur la branche
-   «automne2020».
+   «automne2020». Cliquez sur le petit icône rose.
 
 ![Screenshot, RStudio current project](readme_pictures/remotes1.png)
 
@@ -178,19 +174,17 @@ schéma). Attaquons-nous à ce problème.
    sur le petit icône en forme d'engrenage dans la boîte d'outil puis
    sur `Shell...`.
 
-![Screenshot, RStudio git open shell](readme_pictures/remotes2.png)
+![Screenshot, RStudio git open shell](readme_pictures/remotes3.png)
 
-3. Dans la fenêtre qui vient de s'ouvrir, tapez les 5 commandes
-   suivantes (à chaque fois suivi de `enter`):
+4. Dans la fenêtre qui vient de s'ouvrir, tapez la commande suivante
+   (suivi de `enter`):
 
 ``` Shell
-git remote add upstream https://github.com/cours-patrickFournier/mat8186-r-avance.git
-git fetch upstream automne2020
-git branch --set-upstream-to=upstream/automne2020
-git config remote.pushdefault origin
-git config push.default current
+git config remote.origin.pushurl <URL de votre dépôt>
 ```
-Félicitation, vous êtes maintenant prêt à suivre le cours!
+Vous pouvez trouver l'URL de votre dépôt en cliquant sur le bouton «Code»
+situé au haut de la page de votre dépôt. Félicitation, vous êtes
+maintenant prêt à suivre le cours!
 
 ### Triangular workflow.
 Retournez voir le schéma du début de la section. Remarquez que vous
