@@ -101,12 +101,12 @@ apportés. Pour ce faire,
 Su la page principale de votre compte, cliquez sur le bouton
 «Create repository».
 
-![Screenshot, create repo](readme_picture/create_repo.png)
+![Screenshot, create repo](readme_pictures/create_repo.png)
 
 Par la suite, donnez un nom et décrivez votre nouveau dépôt. Noubliez pas
 de le rendre privé!
 
-![Screenshot, create_repo2](readme_picture/create_repo2.png)
+![Screenshot, create_repo2](readme_pictures/create_repo2.png)
 
 ### Dupliquez le dépôt.
 Cette étape a pour but de créer votre propre copie personnelle du
@@ -166,9 +166,7 @@ vos modifications locales soient envoyées à votre dépôt. Pour ce faire,
 
 1. Assurez-vous que RStudio soit bien ouvert à votre projet (coin
    supérieur droit) et que vous travailliez bien sur la branche
-   «automne2020». Cliquez sur le petit icône rose.
-
-![Screenshot, RStudio current project](readme_pictures/remotes1.png)
+   «automne2020».
 
 2. Dans le panneau supérieur droit, cliquez sur l'onglet `Git`. Cliquez
    sur le petit icône en forme d'engrenage dans la boîte d'outil puis
@@ -182,7 +180,7 @@ vos modifications locales soient envoyées à votre dépôt. Pour ce faire,
 ``` Shell
 git config remote.origin.pushurl <URL de votre dépôt>
 ```
-Vous pouvez trouver l'URL de votre dépôt en cliquant sur le bouton «Code»
+Vous pouvez trouver l'URL de votre dépôt en cliquant sur le bouton `Code`
 situé au haut de la page de votre dépôt. Félicitation, vous êtes
 maintenant prêt à suivre le cours!
 
