@@ -22,6 +22,9 @@ dépôt contiendra donc l'ensemble du matériel nécessaire*.
   * lundi: 14 et 28 septembre, 12 et 26 octobre.
   * mercredi: 16 et 30 septembre, 14 et 28 octobre.
 
+## Enregistrements.
+* [Cours 1](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=429abe0a-5e48-4357-b778-ac36013ee65d)
+
 ## Coordonnées.
 Vous pouvez me joindre:
 * par e-mail: fournier.patrick@uqam.ca
