@@ -25,6 +25,7 @@ dépôt contiendra donc l'ensemble du matériel nécessaire*.
 ## Enregistrements.
 * [Cours 1](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=429abe0a-5e48-4357-b778-ac36013ee65d)
 * [Cours 2](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=f2f8c177-41a2-4dc2-a630-ac38011f274f)
+* [Cours 3](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=4ddccb38-a1ed-4f45-b329-ac440120a199)
 
 ## Coordonnées.
 Vous pouvez me joindre:
