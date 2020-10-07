@@ -27,6 +27,7 @@ dépôt contiendra donc l'ensemble du matériel nécessaire*.
 * [Cours 2](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=f2f8c177-41a2-4dc2-a630-ac38011f274f)
 * [Cours 3](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=bd8c850e-5a6a-4f60-91f0-ac44012caf89)
 * [Cours 4](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=25a17132-d2f4-43e5-a904-ac46011d9082)
+* [Séance d'aide -- devoir 2](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=b7857f91-0d17-4bdf-ba1c-ac4d0110e169)
 
 ## Devoirs.
 * [Devoir 1](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir1/devoir.pdf)
