@@ -36,6 +36,7 @@ dépôt contiendra donc l'ensemble du matériel nécessaire*.
     * [Solution au devoir 1](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir1/solution.ipynb)
 * [Devoir 2](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir2/devoir.ipynb)
     * [Solution au devoir 2](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir2/solution.ipynb)
+* [Devoir 3](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir3/devoir.ipynb)
 
 ## Coordonnées.
 Vous pouvez me joindre:
