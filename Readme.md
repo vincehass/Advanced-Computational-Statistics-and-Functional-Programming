@@ -3,7 +3,7 @@
 [![Cours 3](https://img.shields.io/badge/Cours_3-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2020/3-performance)
 [![Cours 4](https://img.shields.io/badge/Cours_4-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2020/4-oop)
 [![Cours 5](https://img.shields.io/badge/Cours_5-Hors--ligne-red.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/5-programmation_concurrente)
-[![Cours 6](https://img.shields.io/badge/Cours_6-Hors--ligne-red.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2019/6-packaging)
+[![Cours 6](https://img.shields.io/badge/Cours_6-En_ligne-green.svg)](https://github.com/cours-patrickFournier/mat8186-r-avance/tree/automne2020/6-packaging)
 
 # MAT8186: Techniques avancées en programmation statistiques R
 ## Bienvenue!
