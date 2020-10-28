@@ -4,7 +4,8 @@ polynR<- function(coefs) {
   is.numeric(coefs)||
     identical(length(coefs), as.integer(length(coefs))) ||
       stop("coefs doit etre un vecteur d entier")
-    is.numeric(coefs)
+    is.numeric(coefs)||
+      stop("coefs doit être numeric")
   while ((lcoefs <- length(coefs)) > 1 && coefs[lcoefs] == 0) coefs <- coefs[-lcoefs]
   structure(as.numeric(coefs), class = c("polynR", "numeric"))
 }
@@ -103,8 +104,9 @@ deriv.polynR<-function(p){
 }  
 
 
-
+#visualiser le polynome
 print.polynR(polynR(c(6,2,10,2,32)))
+#visualiser la derivee du polynome
 print.polynR(deriv.polynR(c(6,2,10,2,32)))
 
 #Question f)
@@ -114,9 +116,9 @@ racines.polynR<-function(p){
   polyroot(rev(p))
 }
 
-
+#visualiser le polynome
 print.polynR(polynR(c(3,-4,5)))
-
+#visualiser les racines du polynome
 print.polynR(Re(racines.polynR(polynR(c(3,-4,5)))))
 
 
@@ -133,7 +135,7 @@ summary.polynR<-function(object){
   cat("(x",-1*lambda, ")(x+",lambdaBar,")")
 }
 
-
+#visualiser le sommaire ainsi que la factorisation du polynome
 summary.polynR(polynR(c(3,-4,5)))
 
 
