@@ -31,6 +31,7 @@ dépôt contiendra donc l'ensemble du matériel nécessaire*.
 * [Cours 5](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=b1583965-2239-4962-a26f-ac54015021d8)
 * [Cours 6](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=040aa79b-1b2e-4312-9d82-ac5b01222914)
 * [Cours 7](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=17fad16a-0089-4189-80bd-ac60012f653b)
+* [Cours 8](https://uqam.ca.panopto.com/Panopto/Pages/Viewer.aspx?id=218f1332-1920-4c90-b603-ac62016c3d51)
 
 ## Devoirs.
 * [Devoir 1](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir1/devoir.pdf)
@@ -38,6 +39,8 @@ dépôt contiendra donc l'ensemble du matériel nécessaire*.
 * [Devoir 2](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir2/devoir.ipynb)
     * [Solution au devoir 2](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir2/solution.ipynb)
 * [Devoir 3](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir3/devoir.ipynb)
+    * [Solution au devoir 3](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir3/solution.ipynb)
+* [Devoir 4](https://github.com/cours-patrickFournier/mat8186-r-avance/blob/automne2020/devoir4/devoir.ipynb)
 
 ## Coordonnées.
 Vous pouvez me joindre:
