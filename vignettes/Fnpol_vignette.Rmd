@@ -26,19 +26,20 @@ enhanced Fast fourrier method `fft_c2`, random variable simulator for differents
 
 ## Naive form Fast Fourier Inverse
 ```{r}
-
-dft1_naive(vec_com,ki=3)
+vec_com<-sample(complex(real=sample(1:20,16), imaginary = sample(1:20,16)),16)
+vec_com
+dft1_naive(vec_com,k=3)
 ```
 
 ## Iterative Form for Fast Fourier Transform
 ```{r}
 
-dft1_iter(vec_com,ki=3)
+dft1_iter(vec_com,k=3)
 ```
 ## Matrix Form for Fast Fourier Transform
 ```{r}
 
-dft1_matrix(vec_com,ki=3)
+dft1_matrix(vec_com,k=3)
 ```
 ## Comparaison of all methods for Fast Fourier Transform
 ```{r}
@@ -56,12 +57,12 @@ fib_mulPos_rec(3)
 ```
 ## Scalable Fast Fourier Transform
 ```{r}
-fft_ct2(com_vec)
+fft_ct2(vec_com)
 ```
 
 ## Comparaison tool Fast Fourier Transform
 ```{r}
-all.equal(fft_ct2(com_vec), fft(com_vec))
+all.equal(fft_ct2(vec_com), fft(vec_com))
 ```
 
 
