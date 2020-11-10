@@ -18,7 +18,6 @@ a vector of a transformed realisation
 Generator of a Transformed Discrete distribution
 }
 \examples{
- 
 vec<-c(2,10,4,6)
 simulateur2(simulateur1(100), vec**2).
 }

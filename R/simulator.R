@@ -1,59 +1,36 @@
 
-#' Inverse Discrete Distribution
-#'
-#' @param vec an integer vector
-#'
-#' @return the inverse of discrete distribution
-#' @export
-#'
-#' @examples
-#' vec<-c(2,10,4,6)
-#' discrete_inv(vec)
-discrete_inv<- function(vec) {
-  u<-runif(1)
-  vect<-vec/sum(vec)
-  if(u <= vect[1]){
-    return(vec[1])
-  }
-  for(pos in 2:length(vec)) {
-    if(sum(vect[1:(pos-1)]) < u && u <= sum(vect[1:pos]) ) {
-      return(vec[pos])
-    }
-  }
-  
-}
 
 #' Generator of Discrete distribution
 #'
-#' @param n an integer vector 
+#' @param n an integer vector
 #'
 #' @return a sequence of discrete random variable
 #' @export
 #'
-#' @examples 
+#' @examples
 #' simulateur1(10)
 simulateur1<-function(n){
-  
-  names(vec) <- as.character(vec)
+  n_vec<-sample(n)
+  names(n) <- as.character(n)
   samples<- numeric(n)
-  
-  
-  discrete_inv<- function(vec) {
+
+
+  discrete_inv<- function(n_vec) {
     u<-runif(1)
-    vect<-vec/sum(vec)
+    vect<-n_vec/sum(n_vec)
     if(u <= vect[1]){
-      return(vec[1])
+      return(n_vec[1])
     }
-    for(pos in 2:length(vec)) {
+    for(pos in 2:length(n_vec)) {
       if(sum(vect[1:(pos-1)]) < u && u <= sum(vect[1:pos]) ) {
-        return(vec[pos])
+        return(n_vec[pos])
       }
     }
-    
+
   }
-  
+
   for(i in seq_len(n) ) {
-    samples[i] <- discrete_inv(vec)
+    samples[i] <- discrete_inv(n_vec)
   }
   return(samples)
   }
@@ -73,8 +50,9 @@ simulateur1<-function(n){
 #' discrete_inverse_tran(simulateur1(100), vec**2)
 discrete_inverse_tran<-function(sim,trans){
   tr<<-function(x) trans
+  sim<<-function(x) sim
   return(sim(tr(x)))
-  
+
 }
 
 
@@ -86,17 +64,17 @@ discrete_inverse_tran<-function(sim,trans){
 #' @return a vector of a transformed realisation
 #' @export
 #'
-#' @examples  
+#' @examples
 #' vec<-c(2,10,4,6)
 #' simulateur2(simulateur1(100), vec**2).
 simulateur2<-function(sim, trans){
-  
+
   n<-length(sim)
   samples<- numeric(n)
   for(i in seq_len(n) ) {
     samples[i] <- discrete_inverse_tran(discrete_inv, trans)
   }
-  
+
   return(samples)
 }
 
@@ -104,8 +82,8 @@ simulateur2<-function(sim, trans){
 
 #' Sum of two generators
 #'
-#' @param sim1 a vector of simulated distribution 
-#' @param sim2 a vector of simulated distribution 
+#' @param sim1 a vector of simulated distribution
+#' @param sim2 a vector of simulated distribution
 #'
 #' @return a vector of simulated distribution
 #' @export
@@ -116,19 +94,19 @@ simulateur2<-function(sim, trans){
 #' simulateur_sum(simulateur1(10),simulateur1(50))
 
 simulateur_sum<-function(sim1, sim2){
-  
+
   if(length(sim1) < length(sim2)){
-    x_bis<-c(sim1, rep(0,abs(length(sim1)-length(sim2))))  
+    x_bis<-c(sim1, rep(0,abs(length(sim1)-length(sim2))))
     x_bis<-x_bis+sim2
   }else if(length(sim2) < length(sim1)){
-    x_bis<-c(sim2, rep(0,abs(length(sim1)-length(sim2))))  
+    x_bis<-c(sim2, rep(0,abs(length(sim1)-length(sim2))))
     x_bis<-x_bis+sim1
   }else{
     x_bis<-sim1+sim2
   }
-  
+
   return(simulateur2(simulateur1(length(x_bis)), x_bis))
-  
+
 }
 
 
@@ -137,7 +115,7 @@ simulateur_sum<-function(sim1, sim2){
 
 #' Generator of proportion
 #'
-#' @param sim a vector of simulated distribution  
+#' @param sim a vector of simulated distribution
 #'
 #' @return a vector of simulated distribution
 #' @export
@@ -148,7 +126,7 @@ simulateur_sum<-function(sim1, sim2){
 #' simulateur_prop(simulateur_sum(simulateur1(n),simulateur2(simulateur1(n), vec**2)))
 simulateur_prop<-function(sim){
   return(table(sim)/length(sim))
-  
+
 }
 
 
@@ -181,7 +159,7 @@ simulateur_bar<-function(sim){
 
 #' Sequence of a bounded arithmetic operation
 #'
-#' @param l an integer vector 
+#' @param l an integer vector
 #'
 #' @return the longest vector of realisation inside the bound.
 #' @export
@@ -189,7 +167,7 @@ simulateur_bar<-function(sim){
 #' @examples
 #' NbSerie(c(2,2,5,6,6,6,7,9))
 NbSerie<-function(l){
-  
+
   operation<-function(l){
     c((`*`(`+`(`*`(`^`(l[1],l[2]),l[3]),l[4]),l[5])),
       (`^`(`+`(`*`(`^`(l[1],l[2]),l[3]),l[4]),l[5])),

@@ -1,0 +1,67 @@
+---
+title: "Fnpol vignette"
+author: "Nadhir Hassen"
+date: "`r Sys.Date() `"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Fnpol_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(fnpol)
+```
+
+This package describes functionalities for fast computation with the following methods: 
+enhanced Fast fourrier method `fft_c2`, random variable simulator for differents sets of operators such as sum `simulateur_sum`, proportion `simulateur_prop` and summary distribution `simulateur_prop` , inverse and `simulateur_bar`. In addition, we provide a class of polynomial that return a differents polynomials transformation such that sum of polynomials, multiplication of polynomials, derivative of polynomials and summary statistics.
+
+
+## Naive form Fast Fourier Inverse
+```{r}
+
+dft1_naive(vec_com,ki=3)
+```
+
+## Iterative Form for Fast Fourier Transform
+```{r}
+
+dft1_iter(vec_com,ki=3)
+```
+## Matrix Form for Fast Fourier Transform
+```{r}
+
+dft1_matrix(vec_com,ki=3)
+```
+## Comparaison of all methods for Fast Fourier Transform
+```{r}
+c(all.equal(dft_factory_all(vec_com)[,1], Im(fft(vec_com))),
+  all.equal(dft_factory_all(vec_com)[,2], Im(fft(vec_com))),
+  all.equal(dft_factory_all(vec_com)[,3], Im(fft(vec_com))))
+```
+
+
+
+
+## Fibonacci sequence
+```{r}
+fib_mulPos_rec(3)
+```
+## Scalable Fast Fourier Transform
+```{r}
+fft_ct2(com_vec)
+```
+
+## Comparaison tool Fast Fourier Transform
+```{r}
+all.equal(fft_ct2(com_vec), fft(com_vec))
+```
+
+
