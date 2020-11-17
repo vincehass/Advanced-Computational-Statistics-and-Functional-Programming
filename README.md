@@ -1,15 +1,18 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# fnpol
+# Fnpol
 
 <!-- badges: start -->
 
+[![documentation](https://img.shields.io/badge/documentation-Fnpol-green.svg)](https://github.com/vincehass/Advanced-Computational-Statistics-and-Functional-Programming/tree/master/1-Fnpol)
 <!-- badges: end -->
 
 The goal of fnpol is to provide functionalities for fast computation for
 the following methods: Fast fourrier methods, inverse generator
 simulation and polynomials series.
+
+### Author: Nadhir Hassen
 
 ## Installation
 
@@ -48,10 +51,10 @@ where \(i\) is the imaginary part and the complex serie
 ``` r
 vec_com<-sample(complex(real=sample(1:20,16), imaginary = sample(1:20,16)),16)
 vec_com
-#>  [1]  6+ 9i  1+ 3i 13+ 4i 11+11i 14+ 6i 20+20i  9+16i 18+19i  4+17i  2+13i
-#> [11] 16+15i 12+ 2i  7+ 1i  8+18i 19+ 5i  5+12i
+#>  [1]  5+ 8i  2+14i 18+ 9i 10+ 7i 15+ 4i 19+ 6i 16+10i 17+ 5i  6+11i  3+17i
+#> [11]  1+ 2i 12+20i 11+16i 14+15i  4+18i 20+19i
 dft1_naive(vec_com,k=3)
-#> [1] 3.898926
+#> [1] -17.36409
 ```
 
 ### Iterative Form for Fast Fourier Transform
@@ -59,7 +62,7 @@ dft1_naive(vec_com,k=3)
 ``` r
 
 dft1_iter(vec_com,k=3)
-#> [1] 3.898926
+#> [1] -17.36409
 ```
 
 ### Matrix Form for Fast Fourier Transform
@@ -67,8 +70,8 @@ dft1_iter(vec_com,k=3)
 ``` r
 
 dft1_matrix(vec_com,k=3)
-#>          [,1]
-#> [1,] 3.898926
+#>           [,1]
+#> [1,] -17.36409
 ```
 
 ### Comparaison of all methods for Fast Fourier Transform
@@ -104,12 +107,12 @@ implement the algorithm below.
 
 ``` r
 fft_ct2(vec_com)
-#>  [1] 165.000000+171.000000i   3.055174- 49.146005i -58.961941+ 32.849242i
-#>  [4]  -8.278038+  3.898926i -16.000000+  8.000000i -11.583770-  2.540301i
-#>  [7] -19.606602+ 40.506097i  28.873570- 27.476445i  11.000000- 25.000000i
-#> [10]  20.844321+  6.418083i  32.961941+  3.150758i  -7.621457+ 43.598549i
-#> [13] -36.000000- 22.000000i  15.684275- 14.731777i   1.606602-  0.506097i
-#> [16] -24.974075- 24.021029i
+#>  [1] 173.000000+181.000000i -37.833566-  9.508459i -32.000000+ 35.355339i
+#>  [4]   6.702966- 17.364094i  -1.000000+ 21.000000i -30.347867-  0.161973i
+#>  [7]  20.384776+ 23.455844i -10.757302+ 22.239852i -21.000000- 25.000000i
+#> [10]  17.490420- 24.290531i -32.000000- 35.355339i   6.811752- 42.861303i
+#> [13]  -3.000000- 21.000000i  -1.308987+  5.960962i -16.384776- 27.455844i
+#> [16]  41.242584+ 41.985544i
 ```
 
 ## Comparaison tool Fast Fourier Transform
@@ -148,12 +151,12 @@ simulator_sum<-function(v1,v2,trans=identity){
 lapply(list(length(c(v1,v2))),realization_sum(v1,v2, trans))};
 simulator_sum(c(1,2,3),c(2,3,4), identity);
 #> [[1]]
-#> [1] 5 7 7 5 7 3
+#> [1] 5 5 5 5 7 5
 f2<-function(x) x**2;
 sim_sum<-simulator_sum(c(1,2,3),c(2,3,4), f2);
 sim_sum
 #> [[1]]
-#> [1] 25 49 49 49 49 25
+#> [1] 25 49 49 25 49  9
 ```
 
 ### Proportion of the simulated random variable
@@ -169,8 +172,8 @@ simulator_prop(sim_tran);
 #>  1  1  1  3
 simulator_prop(sim_tran2)
 #> 
-#>  16  36 100 400 
-#>   1   1   1   3
+#>   9 100 400 
+#>   1   1   4
 ```
 
 ### Histogram of realized random variables
@@ -182,8 +185,8 @@ sim_tran<-simulator_tran(xs)
 sim_tran2<-simulator_tran(xs,f2);
 simulator_prop(sim_tran);
 #> 
-#> 10 20 
-#>  2  4
+#>  4  6 10 20 
+#>  1  1  2  2
 simulator_bar(sim_tran);
 ```
 
@@ -207,37 +210,37 @@ lowerb = -1e10,
 upperb = 1e10,
 nb_iters = 1e5L)
 tracking_operator(w,k=10)
-#> The result of  36  has been obtained by this set of numbers  6 6 9 2 5  and the following operation
+#> The result of  11  has been obtained by this set of numbers  6 9 5 2 6  and the following operation
 #> [[1]]
-#> function (e1, e2)  .Primitive("/")
+#> function (e1, e2)  .Primitive("*")
 #> 
 #> [[2]]
-#> function (e1, e2)  .Primitive("-")
+#> function (e1, e2)  .Primitive("^")
 #> 
 #> [[3]]
 #> function (e1, e2)  .Primitive("*")
 #> 
 #> [[4]]
-#> function (e1, e2)  .Primitive("-")
+#> function (e1, e2)  .Primitive("*")
 #> 
 #> [[5]]
-#> function (e1, e2)  .Primitive("+")
+#> function (e1, e2)  .Primitive("/")
 tracking_operator(w,k=100)
-#> The result of  5  has been obtained by this set of numbers  7 6 6 9 2  and the following operation
+#> The result of  1  has been obtained by this set of numbers  6 7 6 2 9  and the following operation
 #> [[1]]
-#> function (e1, e2)  .Primitive("/")
+#> function (e1, e2)  .Primitive("*")
 #> 
 #> [[2]]
-#> function (e1, e2)  .Primitive("-")
+#> function (e1, e2)  .Primitive("^")
 #> 
 #> [[3]]
 #> function (e1, e2)  .Primitive("*")
 #> 
 #> [[4]]
-#> function (e1, e2)  .Primitive("-")
+#> function (e1, e2)  .Primitive("*")
 #> 
 #> [[5]]
-#> function (e1, e2)  .Primitive("+")
+#> function (e1, e2)  .Primitive("/")
 ```
 
 ## Algebric description of Polynomials

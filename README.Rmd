@@ -13,14 +13,16 @@ knitr::opts_chunk$set(
 )
 ```
 
-# fnpol
+# Fnpol
 
 <!-- badges: start -->
+[![documentation](https://img.shields.io/badge/documentation-Fnpol-green.svg)](https://github.com/vincehass/Advanced-Computational-Statistics-and-Functional-Programming/tree/master/1-Fnpol)
 <!-- badges: end -->
 
 The goal of fnpol is to provide functionalities for fast computation for the following methods: 
               Fast fourrier methods, inverse generator simulation and polynomials series.
 
+### Author: Nadhir Hassen
 ## Installation
 
 You can install the released version of fnpol from [CRAN](https://CRAN.R-project.org) with:
