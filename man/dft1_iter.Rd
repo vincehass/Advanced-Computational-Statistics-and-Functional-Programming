@@ -2,9 +2,9 @@
 % Please edit documentation in R/fft.R
 \name{dft1_iter}
 \alias{dft1_iter}
-\title{Iterative Form for Fast Fourier Transform}
+\title{Iterative Fast Fourier Transform}
 \usage{
-dft1_iter(x, k)
+dft1_iter(x,k)
 }
 \arguments{
 \item{x}{a complex vector}
@@ -12,11 +12,12 @@ dft1_iter(x, k)
 \item{k}{an integer}
 }
 \value{
-Imaginary part of fast fourier transform
+Imaginary part of fast fourier inverse
 }
 \description{
-Iterative Form for Fast Fourier Transform
+This function allows the user to compute the fast fourier transform with an iterative method.
 }
 \examples{
-
+\dontrun{vec_com<-complex(real = sample(10), imaginary = sample(10))
+dft1_iter(vec_com,3)}
 }

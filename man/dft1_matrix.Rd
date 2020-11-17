@@ -4,7 +4,7 @@
 \alias{dft1_matrix}
 \title{Matrix form of Fast Fourier Transform}
 \usage{
-dft1_matrix(x, k)
+dft1_matrix(x,k)
 }
 \arguments{
 \item{x}{a complex vector}
@@ -15,5 +15,9 @@ dft1_matrix(x, k)
 Imaginary part of fast fourier inverse
 }
 \description{
-Matrix form of Fast Fourier Transform
+This function allows the user to compute the fast fourier transform with a matrix method.
+}
+\examples{
+\dontrun{vec_com<-complex(real = sample(10), imaginary = sample(10))
+dft1_matrix(vec_com,3)}
 }

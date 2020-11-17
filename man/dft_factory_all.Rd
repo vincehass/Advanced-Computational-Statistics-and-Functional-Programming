@@ -2,16 +2,20 @@
 % Please edit documentation in R/fft.R
 \name{dft_factory_all}
 \alias{dft_factory_all}
-\title{Title}
+\title{Fast Fourier Transform method check}
 \usage{
 dft_factory_all(xk)
 }
 \arguments{
-\item{xk}{}
+\item{xk}{a complex vector}
 }
 \value{
 Fast Fourier Transform for each method
 }
 \description{
-Title
+This method allows to the user to compute all methods at once.
+}
+\examples{
+\dontrun{vec_com<-complex(real = sample(10), imaginary = sample(10))
+dft_factory_all(vec_com)}
 }

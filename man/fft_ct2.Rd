@@ -2,16 +2,20 @@
 % Please edit documentation in R/fft.R
 \name{fft_ct2}
 \alias{fft_ct2}
-\title{Scalable Fast Fourier Transform}
+\title{Fast Fourier Transform}
 \usage{
 fft_ct2(x)
 }
 \arguments{
-\item{x}{an integer}
+\item{x}{a complex vector}
 }
 \value{
 Fast Fourier Transform sequence
 }
 \description{
-Scalable Fast Fourier Transform
+This function allows to compute the Fast Fourier Transform with a a faster computation method.
+}
+\examples{
+\dontrun{vec_com<-complex(real = sample(10), imaginary = sample(10))
+fft_ct2(vec_com)}
 }

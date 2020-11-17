@@ -35,9 +35,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(fnpol)
-## print.polynR(deriv.polynR(c(6,2,10,2,32)))
-## summary.polynR(polynR(c(3,-4,5)))
 ```
 
 
-You can check more the description on GitHub!
+You can check more the description on Cran!

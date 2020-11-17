@@ -10,8 +10,11 @@ fib_mulPos_rec(k)
 \item{k}{an integer}
 }
 \value{
-fibonacci sequence
+a fibonacci sequence
 }
 \description{
-Fibonacci Serie
+This function allows to compute the Fibonacci serie
+}
+\examples{
+\dontrun{fib_mulPos_sec(3)}
 }

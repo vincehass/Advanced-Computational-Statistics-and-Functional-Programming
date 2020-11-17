@@ -2,9 +2,9 @@
 % Please edit documentation in R/fft.R
 \name{dft1_naive}
 \alias{dft1_naive}
-\title{Naive form Fast Fourier Inverse}
+\title{Naive Fast Fourier Inverse}
 \usage{
-dft1_naive(x, k)
+dft1_naive(x,k)
 }
 \arguments{
 \item{x}{a complex vector}
@@ -15,5 +15,9 @@ dft1_naive(x, k)
 Imaginary part of fast fourier inverse
 }
 \description{
-Naive form Fast Fourier Inverse
+This function allows the user to compute the fast fourier transform with a naive method.
+}
+\examples{
+\dontrun{vec_com<-complex(real = sample(10), imaginary = sample(10))
+dft1_naive(vec_com,3)}
 }

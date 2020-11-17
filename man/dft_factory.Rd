@@ -2,9 +2,9 @@
 % Please edit documentation in R/fft.R
 \name{dft_factory}
 \alias{dft_factory}
-\title{Title}
+\title{Customized Fast Fourier method computation}
 \usage{
-dft_factory(xk, FunF)
+dft_factory(xk,FunF)
 }
 \arguments{
 \item{xk}{a complex vector}
@@ -12,8 +12,12 @@ dft_factory(xk, FunF)
 \item{FunF}{method to be used}
 }
 \value{
-Fast Fourier Transform
+Fast Fourier Transform according to the method specified
 }
 \description{
-Title
+Run a pre-specified method by user.
+}
+\examples{
+\dontrun{vec_com<-complex(real = sample(10), imaginary = sample(10))
+dft_factory(vec_com,3)}
 }
