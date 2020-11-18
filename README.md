@@ -52,10 +52,10 @@ where \(i\) is the imaginary part and the complex serie
 ``` r
 vec_com<-sample(complex(real=sample(1:20,16), imaginary = sample(1:20,16)),16)
 vec_com
-#>  [1] 15+12i 10+11i 16+ 9i 17+ 7i  5+16i 13+ 2i 19+17i 12+ 6i  2+10i 14+18i
-#> [11] 18+ 5i  4+ 4i  9+ 8i 11+15i  6+ 3i  3+20i
+#>  [1]  2+14i 10+ 1i 18+19i  8+18i 20+ 8i 16+16i 13+ 7i 12+ 5i 11+ 3i  7+11i
+#> [11]  3+ 6i 14+15i  9+ 9i  6+20i  4+10i 19+12i
 dft1_naive(vec_com,k=3)
-#> [1] -13.68954
+#> [1] -8.673226
 ```
 
 ### Iterative Form for Fast Fourier Transform
@@ -63,7 +63,7 @@ dft1_naive(vec_com,k=3)
 ``` r
 
 dft1_iter(vec_com,k=3)
-#> [1] -13.68954
+#> [1] -8.673226
 ```
 
 ### Matrix Form for Fast Fourier Transform
@@ -72,7 +72,7 @@ dft1_iter(vec_com,k=3)
 
 dft1_matrix(vec_com,k=3)
 #>           [,1]
-#> [1,] -13.68954
+#> [1,] -8.673226
 ```
 
 ### Comparaison of all methods for Fast Fourier Transform
@@ -108,12 +108,12 @@ implement the algorithm below.
 
 ``` r
 fft_ct2(vec_com)
-#>  [1] 174.000000+163.000000i  -1.954743- 12.030761i  -9.363961+  3.849242i
-#>  [4]  -2.377672- 13.689541i -19.000000-  0.000000i  18.441603+ 34.073385i
-#>  [7]  11.121320- 16.334524i -27.808755- 29.654595i   6.000000-  3.000000i
-#> [10]  48.197384-  5.667724i   3.363961- 25.849242i  59.046719+  8.275328i
-#> [13] -37.000000+ 24.000000i  19.315756+  7.625100i   6.878680+ 30.334524i
-#> [16]  -8.860293+ 27.068809i
+#>  [1] 172.000000+174.000000i  -2.999929-  7.914493i -10.828427- 22.384776i
+#>  [4]  -1.885935-  8.673226i   2.000000+  6.000000i -55.245884+ 18.498313i
+#>  [7] -32.485281+ 42.183766i -21.373785+ 48.212341i -12.000000- 22.000000i
+#> [10]   5.627346-  3.399215i  -5.171573+ 14.384776i  -8.457211-  3.895316i
+#> [13]   6.000000- 22.000000i  12.618467-  7.184605i -15.514719- 34.183766i
+#> [16]  -0.283069+ 52.356201i
 ```
 
 ## Comparaison tool Fast Fourier Transform
@@ -152,12 +152,12 @@ simulator_sum<-function(v1,v2,trans=identity){
 lapply(list(length(c(v1,v2))),realization_sum(v1,v2, trans))};
 simulator_sum(c(1,2,3),c(2,3,4), identity);
 #> [[1]]
-#> [1] 5 7 5 5 7 5
+#> [1] 3 7 7 7 3 5
 f2<-function(x) x**2;
 sim_sum<-simulator_sum(c(1,2,3),c(2,3,4), f2);
 sim_sum
 #> [[1]]
-#> [1] 25 25 25 25  9  9
+#> [1] 25 25 25  9 49 25
 ```
 
 ### Proportion of the simulated random variable
@@ -169,12 +169,12 @@ sim_tran<-simulator_tran(xs)
 sim_tran2<-simulator_tran(xs,f2);
 simulator_prop(sim_tran);
 #> 
-#>  5  6 10 20 
-#>  1  1  3  1
+#> 10 20 
+#>  2  4
 simulator_prop(sim_tran2)
 #> 
-#>  25 100 400 
-#>   2   3   1
+#>  36 100 400 
+#>   1   3   2
 ```
 
 ### Histogram of realized random variables
@@ -186,8 +186,8 @@ sim_tran<-simulator_tran(xs)
 sim_tran2<-simulator_tran(xs,f2);
 simulator_prop(sim_tran);
 #> 
-#>  5  6 10 20 
-#>  1  2  1  2
+#>  3  5 10 20 
+#>  1  2  2  1
 simulator_bar(sim_tran);
 ```
 
@@ -203,45 +203,48 @@ simulator_bar(sim_tran2)
 
 This function allows to calculate the longest bounded sequence given a
 defined arithmetic operation. We can simply track the decomposition of a
-selected operation, we give two examples below.
+selected operation. The `tracking_operator` takes as input the
+`sequence_long` which is the the sequence generator, `k` the index of a
+given result and `i` the operation performed to get the result. We have
+restrict ourselves to \(5\) operations per set of number sampled, where
+\(1\leq i\leq 5\) and \(1\leq k\leq 5000\).
 
 ``` r
 w<-sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 lowerb = -1e10,
-upperb = 1e10,
-nb_iters = 1e5L)
-tracking_operator(w,k=10)
-#> The result of  0.6666667  has been obtained by this set of numbers  6 2 6 7 6  and the following operation
+upperb = 1e10)
+tracking_operator(data = w, k=30,i=4)
+#> The result of  42  has been obtained by this set of numbers  2 6 6 7 6  and the following operation
 #> [[1]]
 #> function (e1, e2)  .Primitive("^")
 #> 
 #> [[2]]
+#> function (e1, e2)  .Primitive("-")
+#> 
+#> [[3]]
+#> function (e1, e2)  .Primitive("*")
+#> 
+#> [[4]]
+#> function (e1, e2)  .Primitive("^")
+#> 
+#> [[5]]
 #> function (e1, e2)  .Primitive("/")
+tracking_operator(data = w, k=10, i=5)
+#> The result of  49  has been obtained by this set of numbers  6 2 6 5 7  and the following operation
+#> [[1]]
+#> function (e1, e2)  .Primitive("^")
+#> 
+#> [[2]]
+#> function (e1, e2)  .Primitive("*")
 #> 
 #> [[3]]
 #> function (e1, e2)  .Primitive("^")
 #> 
 #> [[4]]
-#> function (e1, e2)  .Primitive("*")
+#> function (e1, e2)  .Primitive("+")
 #> 
 #> [[5]]
-#> function (e1, e2)  .Primitive("-")
-tracking_operator(w,k=100)
-#> The result of  -4  has been obtained by this set of numbers  2 7 6 6 5  and the following operation
-#> [[1]]
-#> function (e1, e2)  .Primitive("^")
-#> 
-#> [[2]]
-#> function (e1, e2)  .Primitive("/")
-#> 
-#> [[3]]
-#> function (e1, e2)  .Primitive("^")
-#> 
-#> [[4]]
-#> function (e1, e2)  .Primitive("*")
-#> 
-#> [[5]]
-#> function (e1, e2)  .Primitive("-")
+#> function (e1, e2)  .Primitive("+")
 ```
 
 ## Algebric description of Polynomials
@@ -283,7 +286,8 @@ printPol.plynR(derive.plynR(c(1,1,10)))
 
 ``` r
 summaryPol.plynR(plynR(c(1,2,3)))
-#> Summary P(n)
+#> A polynom as  3*x^2 + 2*x + 1
+#>  Its factorization is =
 #> [1] "(x+ 0.33 - 0.47i)" "(x+ 0.33 + 0.47i)"
 ```
 

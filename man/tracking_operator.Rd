@@ -4,12 +4,14 @@
 \alias{tracking_operator}
 \title{Sequence Tracker}
 \usage{
-tracking_operator(invec,k)
+tracking_operator(data,k,i)
 }
 \arguments{
-\item{invec}{a list of computed operations}
+\item{k}{the k_th result from the list (k correspond to the length of the sequence 5000 by default)}
 
-\item{k}{the kth result from the list (correspond to the length of the sequence 1e5L by default)}
+\item{i}{the i_th operation performed randomly (5 operations performed for each set of number)}
+
+\item{data}{a list of stored operations}
 }
 \value{
 the decomposition of the given result
@@ -21,9 +23,8 @@ This function allows to track the decomposition of a selected operation.
 \dontrun{
 w<-sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 lowerb = -1e10,
-upperb = 1e10,
-nb_iters = 1e5L)
-tracking_operator(w,k=10,4)
-tracking_operator(w,k=100,5)
+upperb = 1e10, seq_length= 5000)
+tracking_operator(sequence_long = w, k=30,i=4);
+tracking_operator(sequence_long = w, k=10, i=5)
 }
 }

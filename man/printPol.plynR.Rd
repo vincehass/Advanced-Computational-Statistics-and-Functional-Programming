@@ -4,7 +4,7 @@
 \alias{printPol.plynR}
 \title{Print Polynomials}
 \usage{
-printPol.plynR(p)
+\method{printPol}{plynR}(p)
 }
 \arguments{
 \item{p}{an integer vector of  coefficients}
@@ -16,5 +16,5 @@ print the algebric form of a class polynom.
 A generic method of class Polynom that allows the user to print the algebric form of a polynom from a given input coefficients.
 }
 \examples{
-\dontrun{printPol.plynR(c(1,2,30))}
+\dontrun{printPol.plynR(c(1,2,3))}
 }

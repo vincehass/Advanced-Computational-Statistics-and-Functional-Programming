@@ -140,11 +140,9 @@ simulator_bar<-function(sim){
 #' @param sets an integer vector
 #' @param lowerb lower bound
 #' @param upperb upper bound
-#' @param nb_iters number of iterations
 #' @usage sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 #'lowerb = -1e10,
-#'upperb = 1e10,
-#'nb_iters = 1e5L)
+#'upperb = 1e10)
 #' @return the longest sequence inside the given bound
 #' @export
 #'
@@ -152,58 +150,64 @@ simulator_bar<-function(sim){
 #' \dontrun{
 #' sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 #'lowerb = -1e10,
-#'upperb = 1e10,
-#'nb_iters = 1e5L)
-#' }
+#'upperb = 1e10)}
 sequence_long<-function(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
          lowerb = -1e10,
-         upperb = 1e10,
-         nb_iters = 1e5L) {
+         upperb = 1e10) {
   operators <- list(`+`, `-`, `*`, `/`, `^`)
-
-  res_set<-replicate(n = nb_iters, simplify = FALSE,
+  seq_length<-5000
+  res_set<-replicate(n = 1e5L, simplify = FALSE,
                    expr=sample(sets,5))
-  res_op<-replicate(n = nb_iters, simplify = FALSE,
+  res_op<-replicate(n = 1e5L, simplify = FALSE,
                  expr=sample(operators,5, replace = T))
 
     ress<-as.list(rep(NA),length(res_set))
     operator_track<-as.list(rep(NA),length(res_op))
-    for(i in 1:length(operators)){
-      for(k in 1:5000){
+    for(k in 1:seq_length){
+      for(i in 1:length(operators)){
+        #store in ress results for each operation with different sets
           ress[[k]]<-res_op[[k]][[i]](c(res_set[[k]]),c(res_set[[k+1L]]))
-          operator_track[[k]]<-res_op[[i]]
-          if(ress[[k]]>upperb && ress[[k]]<lowerb){
-            ress[[k]]<-0
-          }
+          operator_track[[i]]<-res_op[[i]]
+
+          ifelse(!is.integer(ress[[k]]), NA,ifelse(ress[[k]]>upperb,NA,
+                                                    ifelse(ress[[k]]<lowerb,NA,ress[[k]])))
         }
-    }
+      }
     return(list(ress, res_set, operator_track))
 
 }
 
+
+
+
 #' @title Sequence Tracker
 #' @description This function allows to track the decomposition of a selected operation.
 #'
-#' @param invec a list of computed operations
-#' @param k the kth result from the list (correspond to the length of the sequence 1e5L by default)
-#' @usage tracking_operator(invec,k)
+#' @param data a list of stored operations
+#' @param k the k_th result from the list (k correspond to the length of the sequence 5000 by default)
+#' @param i the i_th operation performed randomly (5 operations performed for each set of number)
+#' @usage tracking_operator(data,k,i)
 #' @return the decomposition of the given result
 #' @export
 #' @examples
 #' \dontrun{
 #' w<-sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 #'lowerb = -1e10,
-#'upperb = 1e10,
-#'nb_iters = 1e5L)
-#'tracking_operator(w,k=10,4)
-#'tracking_operator(w,k=100,5)
+#'upperb = 1e10)
+#'tracking_operator(data = w, k=30,i=4);
+#'tracking_operator(data = w, k=10, i=5)
 #' }
-tracking_operator<-function(invec,k){
+tracking_operator<-function(data,k,i){
 
-  cat("The result of ",invec[[1]][[k]][1],
+  cat("The result of ",data[[1]][[k]][i],
   " has been obtained by this set of numbers ",
-  invec[[2]][[k]]," and the following operation\n")
-  print(as.vector(invec[[3]][[k]]))
+  data[[2]][[k]]," and the following operation\n")
+  print(as.vector(data[[3]][[i]]))
 }
+
+
+
+
+
 
 

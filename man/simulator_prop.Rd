@@ -23,6 +23,6 @@ xs<-c(10,3,5,20,4,6);
 sim_tran<-simulator_tran(xs)
 sim_tran2<-simulator_tran(xs,f2);
 simulator_prop(sim_tran);
-simulator_prop(sim_tran2);
+simulator_prop(sim_tran2)
 }
 }

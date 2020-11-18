@@ -157,15 +157,14 @@ simulator_bar(sim_tran2)
 ```
 
 ### Random variable Sequence Generator 
-This function allows to calculate the longest bounded sequence given a defined arithmetic operation. We can simply track the decomposition of a selected operation, we give two examples below.
+This function allows to calculate the longest bounded sequence given a defined arithmetic operation. We can simply track the decomposition of a selected operation. The `tracking_operator` takes as input the `sequence_long` which is the the sequence generator, `k` the index of a given result and `i` the operation performed to get the result. We have restrict ourselves to $5$ operations per set of number sampled, where $1\leq i\leq 5$ and $1\leq k\leq 5000$. 
 
 ```{r}
 w<-sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 lowerb = -1e10,
-upperb = 1e10,
-nb_iters = 1e5L)
-tracking_operator(w,k=10)
-tracking_operator(w,k=100)
+upperb = 1e10)
+tracking_operator(data = w, k=30,i=4)
+tracking_operator(data = w, k=10, i=5)
 ```
 
 ## Algebric description of Polynomials

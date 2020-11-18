@@ -68,11 +68,9 @@ plus<- function(...) UseMethod("plus")
 #' @examples
 #' \dontrun{printPol.plynR(plus.plynR(c(1,1,10), c(1,2,10)))}
 plus.plynR<-function(p1,p2){
-  suites<-list(p1,p2)
-  p1 <- suites[[1]]
-  p2 <- suites[[2]]
-  l1 <- length(suites[[1]])
-  l2 <- length(suites[[2]])
+
+  l1 <- length(p1)
+  l2 <- length(p2)
   p1 <- c(p1, rep.int(0, max(0, l2 - l1)))
   p2 <- c(p2, rep.int(0, max(0, l1 - l2)))
   `+` = {
@@ -94,11 +92,9 @@ fois<- function(...) UseMethod("fois")
 #' @examples
 #' \dontrun{printPol.plynR(fois.plynR(c(1,1,10), c(1,2,10)))}
 fois.plynR<-function(p1,p2){
-  suites<-list(p1,p2)
-  p1 <- suites[[1]]
-  p2 <- suites[[2]]
-  l1 <- length(suites[[1]])
-  l2 <- length(suites[[2]])
+
+  l1 <- length(p1)
+  l2 <- length(p2)
 
   `*` = if (l1 == 1 || l2 == 1) {
     res<-p1*p2
@@ -156,7 +152,7 @@ summaryPol.polynR<- function(...) UseMethod("summaryPol.polynR")
 #' @examples
 #' \dontrun{summaryPol.plynR(plynR(c(1,2,3)))}
 summaryPol.plynR<-function(object){
-  cat("Summary P(n) \n")
+  cat("\n",printPol.plynR(object),"Its factorization is = \n")
 
   z_roots<-round(racines.plynR(object),2)
 

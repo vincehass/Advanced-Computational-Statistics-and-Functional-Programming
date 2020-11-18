@@ -29,6 +29,6 @@ This function allows to calculate the longest bounded sequence given a defined a
 sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 lowerb = -1e10,
 upperb = 1e10,
-nb_iters = 1e5L)
+seq_length=5000)
 }
 }

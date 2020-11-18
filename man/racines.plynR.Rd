@@ -16,5 +16,5 @@ return reals and imaginary solutions of a polynom.
 This function allows the user to determine the roots of a polynom from class polynR
 }
 \examples{
-\dontrun{printPol(racines.plynR(c(3,-4,5)))}
+\dontrun{printPol.plynR(racines.plynR(c(3,-4,5)))}
 }

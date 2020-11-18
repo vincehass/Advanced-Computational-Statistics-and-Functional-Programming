@@ -18,5 +18,5 @@ sum of two polynoms from the input coefficients
 Add two polynoms from class polynR
 }
 \examples{
-\dontrun{printPol.plynR(plus.polynR(c(1,1,10), c(1,2,10)))}
+\dontrun{printPol.plynR(plus.plynR(c(1,1,10), c(1,2,10)))}
 }

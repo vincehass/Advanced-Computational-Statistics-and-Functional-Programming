@@ -2,7 +2,7 @@
 % Please edit documentation in R/simulator_v2.R
 \name{simulator_bar}
 \alias{simulator_bar}
-\title{Histogram of distributed realizations}
+\title{Histogram of realized random variables}
 \usage{
 simulator_bar(sim)
 }
@@ -24,6 +24,6 @@ sim_tran<-simulator_tran(xs)
 sim_tran2<-simulator_tran(xs,f2);
 simulator_prop(sim_tran);
 simulator_bar(sim_tran);
-simulator_bar(sim_tran2);
+simulator_bar(sim_tran2)
 }
 }

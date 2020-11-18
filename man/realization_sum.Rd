@@ -2,7 +2,7 @@
 % Please edit documentation in R/simulator_v2.R
 \name{realization_sum}
 \alias{realization_sum}
-\title{Generator of two vectors of realization}
+\title{Generator of a sum of random variables}
 \usage{
 realization_sum(vec1,vec2,trans=identity)
 }
