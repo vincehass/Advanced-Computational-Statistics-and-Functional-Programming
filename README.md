@@ -9,8 +9,8 @@
 <!-- badges: end -->
 
 The goal of fnpol is to provide functionalities for fast computation for
-the following methods: Fast fourrier methods, inverse generator
-simulation and polynomials series.
+the following methods: Fast fourrier methods, random variable generator
+and polynomials series.
 
 ### Author: Nadhir Hassen
 
@@ -51,10 +51,10 @@ where \(i\) is the imaginary part and the complex serie
 ``` r
 vec_com<-sample(complex(real=sample(1:20,16), imaginary = sample(1:20,16)),16)
 vec_com
-#>  [1]  5+ 8i  2+14i 18+ 9i 10+ 7i 15+ 4i 19+ 6i 16+10i 17+ 5i  6+11i  3+17i
-#> [11]  1+ 2i 12+20i 11+16i 14+15i  4+18i 20+19i
+#>  [1] 11+ 2i  3+15i 19+18i  9+20i 17+ 4i  5+ 1i  7+17i  4+13i 10+ 9i 15+11i
+#> [11] 18+ 8i  2+12i  8+ 3i 14+ 6i 13+10i 16+16i
 dft1_naive(vec_com,k=3)
-#> [1] -17.36409
+#> [1] 15.49031
 ```
 
 ### Iterative Form for Fast Fourier Transform
@@ -62,7 +62,7 @@ dft1_naive(vec_com,k=3)
 ``` r
 
 dft1_iter(vec_com,k=3)
-#> [1] -17.36409
+#> [1] 15.49031
 ```
 
 ### Matrix Form for Fast Fourier Transform
@@ -70,8 +70,8 @@ dft1_iter(vec_com,k=3)
 ``` r
 
 dft1_matrix(vec_com,k=3)
-#>           [,1]
-#> [1,] -17.36409
+#>          [,1]
+#> [1,] 15.49031
 ```
 
 ### Comparaison of all methods for Fast Fourier Transform
@@ -107,12 +107,12 @@ implement the algorithm below.
 
 ``` r
 fft_ct2(vec_com)
-#>  [1] 173.000000+181.000000i -37.833566-  9.508459i -32.000000+ 35.355339i
-#>  [4]   6.702966- 17.364094i  -1.000000+ 21.000000i -30.347867-  0.161973i
-#>  [7]  20.384776+ 23.455844i -10.757302+ 22.239852i -21.000000- 25.000000i
-#> [10]  17.490420- 24.290531i -32.000000- 35.355339i   6.811752- 42.861303i
-#> [13]  -3.000000- 21.000000i  -1.308987+  5.960962i -16.384776- 27.455844i
-#> [16]  41.242584+ 41.985544i
+#>  [1] 171.000000+165.000000i  28.247820+ 12.131057i  16.213203+  5.384776i
+#>  [4]  -7.935175+ 15.490306i -39.000000- 41.000000i  -0.412661+  9.082538i
+#>  [7]   6.899495+ 16.757359i -10.039681+  0.175907i  35.000000- 23.000000i
+#> [10]   9.693306- 32.817349i -26.213203- 31.384776i  22.077311-  8.661878i
+#> [13]  17.000000- 29.000000i -29.528465- 52.396246i -12.899495+ 25.242641i
+#> [16]  -4.102455+  0.995666i
 ```
 
 ## Comparaison tool Fast Fourier Transform
@@ -151,12 +151,12 @@ simulator_sum<-function(v1,v2,trans=identity){
 lapply(list(length(c(v1,v2))),realization_sum(v1,v2, trans))};
 simulator_sum(c(1,2,3),c(2,3,4), identity);
 #> [[1]]
-#> [1] 5 5 5 5 7 5
+#> [1] 7 3 3 3 7 3
 f2<-function(x) x**2;
 sim_sum<-simulator_sum(c(1,2,3),c(2,3,4), f2);
 sim_sum
 #> [[1]]
-#> [1] 25 49 49 25 49  9
+#> [1] 25 25  9 25 49 49
 ```
 
 ### Proportion of the simulated random variable
@@ -168,11 +168,11 @@ sim_tran<-simulator_tran(xs)
 sim_tran2<-simulator_tran(xs,f2);
 simulator_prop(sim_tran);
 #> 
-#>  5  6 10 20 
-#>  1  1  1  3
+#>  6 10 20 
+#>  2  2  2
 simulator_prop(sim_tran2)
 #> 
-#>   9 100 400 
+#>  25 100 400 
 #>   1   1   4
 ```
 
@@ -185,8 +185,8 @@ sim_tran<-simulator_tran(xs)
 sim_tran2<-simulator_tran(xs,f2);
 simulator_prop(sim_tran);
 #> 
-#>  4  6 10 20 
-#>  1  1  2  2
+#>  4  6 20 
+#>  2  2  2
 simulator_bar(sim_tran);
 ```
 
@@ -210,15 +210,15 @@ lowerb = -1e10,
 upperb = 1e10,
 nb_iters = 1e5L)
 tracking_operator(w,k=10)
-#> The result of  11  has been obtained by this set of numbers  6 9 5 2 6  and the following operation
+#> The result of  3  has been obtained by this set of numbers  6 2 6 6 5  and the following operation
 #> [[1]]
-#> function (e1, e2)  .Primitive("*")
+#> function (e1, e2)  .Primitive("+")
 #> 
 #> [[2]]
-#> function (e1, e2)  .Primitive("^")
+#> function (e1, e2)  .Primitive("+")
 #> 
 #> [[3]]
-#> function (e1, e2)  .Primitive("*")
+#> function (e1, e2)  .Primitive("/")
 #> 
 #> [[4]]
 #> function (e1, e2)  .Primitive("*")
@@ -226,15 +226,15 @@ tracking_operator(w,k=10)
 #> [[5]]
 #> function (e1, e2)  .Primitive("/")
 tracking_operator(w,k=100)
-#> The result of  1  has been obtained by this set of numbers  6 7 6 2 9  and the following operation
+#> The result of  49  has been obtained by this set of numbers  7 2 2 6 6  and the following operation
 #> [[1]]
-#> function (e1, e2)  .Primitive("*")
+#> function (e1, e2)  .Primitive("+")
 #> 
 #> [[2]]
-#> function (e1, e2)  .Primitive("^")
+#> function (e1, e2)  .Primitive("+")
 #> 
 #> [[3]]
-#> function (e1, e2)  .Primitive("*")
+#> function (e1, e2)  .Primitive("/")
 #> 
 #> [[4]]
 #> function (e1, e2)  .Primitive("*")

@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 The goal of fnpol is to provide functionalities for fast computation for the following methods: 
-              Fast fourrier methods, inverse generator simulation and polynomials series.
+              Fast fourrier methods, random variable generator and polynomials series.
 
 ### Author: Nadhir Hassen
 ## Installation
