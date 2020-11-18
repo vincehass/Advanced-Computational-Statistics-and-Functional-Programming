@@ -35,7 +35,7 @@ X_k = \sum_{n=0}^{N-1}x_n \exp\left(-2\pi i k \frac{n}{N}\right)
 \end{equation}
 where $i$ is the imaginary part and the complex serie $(x_n)_{n=0}^{N-1}$  $\in \mathbb{C}$.
 
-### Naive form Fast Fourier Inverse
+### Naive form Fast Fourier Transform
 ```{r}
 vec_com<-sample(complex(real=sample(1:20,16), imaginary = sample(1:20,16)),16)
 vec_com
