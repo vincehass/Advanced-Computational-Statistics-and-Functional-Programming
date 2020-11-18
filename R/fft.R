@@ -6,7 +6,6 @@
 #' @usage dft1_naive(x,k)
 #' @param x a complex vector
 #' @param k an integer
-#'
 #' @return Imaginary part of fast fourier inverse
 #' @export
 #'

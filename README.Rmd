@@ -18,15 +18,18 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![documentation](https://img.shields.io/badge/documentation-fnpol-green.svg)](https://github.com/vincehass/Advanced-Computational-Statistics-and-Functional-Programming/tree/master/1-Fnpol)
 [![contributions](https://img.shields.io/badge/contributions-welcome-red.svg)](https://github.com/vincehass/Advanced-Computational-Statistics-and-Functional-Programming/tree/master/1-Fnpol)
+[![check](https://img.shields.io/badge/check-passed-green.svg)](https://github.com/vincehass/Advanced-Computational-Statistics-and-Functional-Programming/tree/master/1-Fnpol)
 <!-- badges: end -->
 
 The goal of fnpol is to provide functionalities for fast computation for the following methods: 
               Fast fourrier methods, random variable generator and polynomials series.
 
 ### Author: Nadhir Hassen
-## Installation
 
-You can install the released version of fnpol from [CRAN](https://CRAN.R-project.org) with:
+
+## Installation
+You need to load `usethis::use_package(devtools)` and `library(devtools)`.
+You can install the released version of **fnpol** from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("fnpol")
@@ -34,6 +37,7 @@ install.packages("fnpol")
 
 ```{r setup}
 library(fnpol)
+library(devtools)
 devtools::load_all()
 ```
 
@@ -51,7 +55,7 @@ X_k = \sum_{n=0}^{N-1}x_n \exp\left(-2\pi i k \frac{n}{N}\right)
 \end{equation}
 where $i$ is the imaginary part and the complex serie $(x_n)_{n=0}^{N-1}$  $\in \mathbb{C}$.
 
-### Naive form Fast Fourier Inverse
+### Naive form Fast Fourier Transform
 ```{r}
 vec_com<-sample(complex(real=sample(1:20,16), imaginary = sample(1:20,16)),16)
 vec_com

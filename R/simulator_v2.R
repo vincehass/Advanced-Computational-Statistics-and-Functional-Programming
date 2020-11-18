@@ -8,7 +8,6 @@
 #' @return a sequence of discrete random variable from the input distribution
 #' @usage simulator(x_vec, trans = identity)
 #' @export
-#'
 #' @importFrom stats runif
 #' @examples
 #' \dontrun{

@@ -6,8 +6,7 @@
 \usage{
 sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 lowerb = -1e10,
-upperb = 1e10,
-nb_iters = 1e5L)
+upperb = 1e10)
 }
 \arguments{
 \item{sets}{an integer vector}
@@ -15,8 +14,6 @@ nb_iters = 1e5L)
 \item{lowerb}{lower bound}
 
 \item{upperb}{upper bound}
-
-\item{nb_iters}{number of iterations}
 }
 \value{
 the longest sequence inside the given bound
@@ -28,7 +25,5 @@ This function allows to calculate the longest bounded sequence given a defined a
 \dontrun{
 sequence_long(sets = c(2L, 2L, 5L, 6L, 6L, 6L, 7L, 9L),
 lowerb = -1e10,
-upperb = 1e10,
-seq_length=5000)
-}
+upperb = 1e10)}
 }
